@@ -8,3 +8,32 @@ SLL are fast for inserting and deleting data. This is because they don't have to
 
 ### Basic code structure of a SLL
 
+```
+class Node {
+  constructor(val){
+    this.val = val;
+    this.next = val;
+  }
+}
+
+class singlyLinkedList{
+  
+   constructor(){
+    this.length = 0;
+    this.head = null;
+    this.tail = null;
+  }
+  push(val){
+    var newNode = new Node(val)
+    if(!this.head){
+      this.head = newNode;
+      this.tail = this.head;
+    }
+  }
+}
+
+var list = new singlyLinkedList()
+list.push("High")
+list.push("there")
+
+```
