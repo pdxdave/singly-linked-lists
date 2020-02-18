@@ -36,7 +36,7 @@ class singlyLinkedList{
       this.tail = this.head;
     } else {
       this.tail.next = newNode;
-      this.tail = newNode;
+      this.tail = newNode; // this is the new tail
   }
   this.length ++
   return this;  // returns list
@@ -94,7 +94,14 @@ class singlyLinkedList{
       newtail = current;
       current = current.next
     }
-    this.tail = newTail
+    this.tail = newTail;
+    this.taile.next = null;
+    this.length --;
+    if(this.length === 0){
+      this.head = null;
+      this.tail = null;
+    }
+    return current;
   }
 }
 
