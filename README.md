@@ -48,3 +48,71 @@ list.push("High")
 list.push("there")
 
 ```
+
+### POP code
+
+Removes the tail node
+
+* The trick is that we have to find the second to last item
+* We have to be able to traverse the code
+
+```
+
+class Node {
+  constructor(val){
+    this.val = val;
+    this.next = null;
+  }
+}
+
+
+class singlyLinkedList{
+  
+   constructor(){
+    this.length = 0;
+    this.head = null;
+    this.tail = null;
+  }
+  
+  push(val){
+    var newNode = new Node(val)
+    if(!this.head){
+      this.head = newNode;
+      this.tail = this.head;
+    } else {
+      this.tail.next = newNode;
+      this.tail = newNode;
+  }
+  this.length ++
+  return this;  // returns list
+ }
+ pop(){
+    if(!this.head) return undefined;
+    var current = this.head;
+    var newTail = current;
+    while(current.next){
+      newtail = current;
+      current = current.next
+    }
+    this.tail = newTail
+  }
+}
+
+var list = new singlyLinkedList()
+list.push("High")
+list.push("there")
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
