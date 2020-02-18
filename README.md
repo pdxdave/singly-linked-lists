@@ -95,7 +95,7 @@ class singlyLinkedList{
       current = current.next
     }
     this.tail = newTail;
-    this.taile.next = null;
+    this.tail.next = null;
     this.length --;
     if(this.length === 0){
       this.head = null;
