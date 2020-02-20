@@ -108,6 +108,7 @@ class singlyLinkedList{
 var list = new singlyLinkedList()
 list.push("High")
 list.push("there")
+list.pop()
 
 ```
 
