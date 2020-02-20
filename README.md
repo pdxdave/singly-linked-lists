@@ -156,7 +156,7 @@ class singlyLinkedList{
     this.head = currentHead.next
     this.length --;
     return currentHead;
-  } // end of shift. removes first item in list
+  } // end of shift
 }
 
 var list = new singlyLinkedList()
@@ -166,7 +166,57 @@ list.shift()
 
 ```
 
+### UNSHIFT
 
+* adds an item to the beginning of the list
+```
+class Node {
+  constructor(val){
+    this.val = val;
+    this.next = null;
+  }
+}
+
+class singlyLinkedList{
+  
+   constructor(){
+    this.length = 0;
+    this.head = null;
+    this.tail = null;
+  }
+  
+  push(val){
+    var newNode = new Node(val)
+    if(!this.head){
+      this.head = newNode;
+      this.tail = this.head;
+    } else {
+      this.tail.next = newNode;
+      this.tail = newNode; // this is the new tail
+  }
+  this.length ++
+  return this;  // returns list
+ }
+ 
+unshift(val){
+    let newNode = new Node(val)
+    if(!this.head){
+      this.head = newNode;
+      this.tail = this.head;
+    }
+    newNode.next = this.head;
+    this.head = newNode
+    this.length ++;
+    return this
+  }// end of unshift
+}
+
+var list = new singlyLinkedList()
+list.push("High")
+list.push("there")
+list.unshift("First")
+
+```
 
 
 
