@@ -111,8 +111,59 @@ list.push("there")
 
 ```
 
+### SHIFT code
+
+* removes the first item in the list
 
 
+```
+* set the intitial class.  
+
+class Node {
+  constructor(val){
+    this.val = val;
+    this.next = null;
+  }
+}
+
+* SLL. We don't know the length, and in the beginning there is no head or tail.
+
+class singlyLinkedList{
+  
+   constructor(){
+    this.length = 0;
+    this.head = null;
+    this.tail = null;
+  }
+  
+  push(val){
+    var newNode = new Node(val)
+    if(!this.head){
+      this.head = newNode;
+      this.tail = this.head;
+    } else {
+      this.tail.next = newNode;
+      this.tail = newNode; // this is the new tail
+  }
+  this.length ++
+  return this;  // returns list
+ }
+ 
+ shift(){
+    if(!this.head) return undefined
+    var currentHead = this.head;
+    this.head = currentHead.next
+    this.length --;
+    return currentHead;
+  } // end of shift. removes first item in list
+}
+
+var list = new singlyLinkedList()
+list.push("High")
+list.push("there")
+list.shift()
+
+```
 
 
 
